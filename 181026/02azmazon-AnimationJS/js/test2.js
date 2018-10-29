@@ -53,3 +53,17 @@ function changeImg(){
 }
 
 var timer=window.setInterval(changeImg,1000)
+
+var imagesA=document.querySelector('#images');
+console.log(imagesA);
+//定义启动定时器函数，函数功能为启动定时器
+function starChange(){
+    timer=window.setInterval(changeImg,1000);
+}
+//定义停止定时器函数，函数功能为停止定时器
+function starChange(){
+    window.clearInterval(timer);
+}
+//为轮播图添加鼠标移入事件
+imagesA.addEventListener('mouseover',stopChange);
+imagesA.addEventListener('mouseout',stopChange);
