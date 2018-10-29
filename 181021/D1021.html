@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            border: 0;
+        }
+
+        .flex-card-image img {
+            display: block;
+            height: auto;
+            margin: 0 auto;
+            max-width: 60%;
+            width: 50%;
+        }
+
+        .demo-display {
+            background: #495A80;
+            border-bottom: 3px solid #495A80;
+
+        }
+
+        .demo-display {
+            margin: 0 auto;
+            padding: 1em 5% 2em;
+            width: 100%;
+        }
+
+        .l-fullheight {
+            min-height: 100vh;
+        }
+
+        .demo-display {
+            box-sizing: border-box;
+            font-family: europa, sans-serif;
+        }
+
+        .flex-card {
+            background: #f2efe6;
+            border-radius: 5px;
+            margin-bottom: 1em;
+            padding: 0.6em;
+            margin: 10px;
+
+        }
+
+        .flex-card-button {
+            background: #C3BED4;
+            border-radius: 5px;
+            color: #495A80;
+            display: block;
+            padding: 1em .40em;
+            text-decoration: none;
+            transition: 3s ease;
+            text-align: center;
+        }
+
+        .flexbox .flex-card-list {
+            /* 让弹性盒元素在必要的时候拆行 */
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 100%;
+        }
+
+        .flexbox .flex-card-listitem {
+            /* 使用flexbox可以控制卡模块 */
+            display: flex;
+        }
+
+        /* 将布局调整为每行2张卡 */
+        @media all and (min-width:40em) {
+
+            /* 浮动布局 */
+            .flex-card-list li {
+                width: 50%;
+                list-style-type: none;
+            }
+
+            /*.no-flexbox*/
+            .flex-card-list li {
+                float: left;
+                list-style-type: none;
+            }
+        }
+
+        /* 将布局调整为每行3张卡 */
+        @media all and (min-width:40em) and (max-width:60em) {
+
+            /* 清除每行2个项目的行 */
+            /*.no-flexbox*/
+            .flex-card-list li:nth-child(2n+1) {
+                clear: both;
+                list-style-type: none;
+            }
+        }
+
+        @media all and (min-width:60em) {
+
+            /* flex and non-flex共有的 */
+            .flex-card-list li {
+                width: 33.33%;
+                list-style-type: none;
+            }
+
+            /* 浮标：每第三项后清除 */
+            .flex-card-list li:nth-child(3n+1) {
+                clear: both;
+                list-style-type: none;
+            }
+        }
+
+        .flexbox .flex-card {
+            /* 弹性盒元素的方向为垂直显示 */
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+        }
+
+        .flexbox .flex-card-content {
+            display: flex;
+            flex: 1 0 auto;
+            flex-direction: column;
+        }
+
+        .flexbox .flex-card-content p {
+            flex: 1 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <figure class="demo-display l-fullheight">
+
+        <ul class="flex-card-list">
+
+            <li class="flex-card-listitem">
+                <div class="flex-card">
+                    <div class="flex-card-image">
+                        <img src="images/u=1957071272,523005036&fm=26&gp=0[1](1).jpg" alt="">
+                    </div>
+                    <div class="flex-card-content">
+                        <h3 class="flex-card-heading"></h3>
+                        <p>魔道祖师</p>
+                        <a href="https://v.qq.com/x/page/i0026ssfw4k.html?ptag=baidu.aladdin.cartoon.pay" class="flex-card-button">点击观看</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="flex-card-listitem">
+                <div class="flex-card">
+                    <div class="flex-card-image">
+                        <img src="images/u=481076545,555099302&fm=26&gp=0[1].jpg" alt="">
+                    </div>
+                    <div class="flex-card-content">
+                        <h3 class="flex-card-heading"></h3>
+                        <p>全职法师</p>
+                        <a href="https://v.qq.com/x/page/u002451vjqr.html?ptag=baidu.aladdin.cartoon.pay" class="flex-card-button">点击观看</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="flex-card-listitem">
+                <div class="flex-card">
+                    <div class="flex-card-image">
+                        <img src="images/u=2488297853,2656111126&fm=26&gp=0[1].jpg" alt="">
+                    </div>
+                    <div class="flex-card-content">
+                        <h3 class="flex-card-heading"></h3>
+                        <p>怪盗基德</p>
+                        <a href="https://v.qq.com/x/page/f0026vfo145.html?ptag=baidu.aladdin.cartoon" class="flex-card-button">点击观看</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="flex-card-listitem">
+                <div class="flex-card">
+                    <div class="flex-card-image">
+                        <img src="images/u=2726709496,1982534995&fm=26&gp=0[1].jpg" alt="">
+                    </div>
+                    <div class="flex-card-content">
+                        <h3 class="flex-card-heading"></h3>
+                        <p>神兵小将</p>
+                        <a href="https://www.iqiyi.com/v_19rrjbrcag.html?vfm=2008_aldbd" class="flex-card-button">点击观看</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="flex-card-listitem">
+                <div class="flex-card">
+
+                    <div class="flex-card-image">
+                        <img src="images/u=3805191872,3396584989&fm=26&gp=0[1].jpg" alt="">
+                    </div>
+                    <div class="flex-card-content">
+                        <h3 class="flex-card-heading"></h3>
+                        <p>柯南</p>
+                        <a href="https://v.qq.com/x/page/t0027rw86xy.html?ptag=baidu.aladdin.cartoon.pay" class="flex-card-button">点击观看</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </figure>
+</body>
+
+</html>

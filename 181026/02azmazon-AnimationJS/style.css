@@ -84,6 +84,12 @@ ul{
    transition: opacity 0.25s linear;
 
 }
+
+.txtItemsLi:last-child{
+    border-right:0;
+    opacity: 1;
+}
+
 .txtItemsLi:hover{
     background-color: #FF8C00;
     opacity: 1;
@@ -101,4 +107,26 @@ ul{
     text-align: center;
     font-weight: bold;
     overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#images{
+    position: relative;
+}
+#images>a{
+    transition:opacity 1s linear;
+    /* display: block; */
+    position: absolute;
+    top :0;
+    left: 0;
+}
+.displayImg{
+    /* display: block; */
+    opacity: "absolute";
+    top: 0;
+    left:0;
+}
+.hiddenImg{
+    /* display: none; */
+    opacity: 0;
 }

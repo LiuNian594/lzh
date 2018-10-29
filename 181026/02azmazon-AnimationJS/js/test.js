@@ -8,9 +8,12 @@ var timer; //设计定时器变量
 // startChange(100);
 timer=window.setInterval(changeNum,1000);
 //获取元素
-var h2Obj = document.querySelector('h2');
-var imgObj=document.querySelector('h2>img');
-console.log(imgObj);
+var images1= document.querySelector('#images');
+var images2=document.getElementById('images');
+console.log(images1);
+console.log(images2);
+console.log(images2.children[3]);
+images2.children[4].style
 //设置当前变化的好吗变量为初值
 var currentNo = 1;
 // var flag = true;
