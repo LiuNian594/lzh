@@ -177,11 +177,22 @@ img{
     bottom: 0;
     display: flex;
     z-index: 5;
+    transition: height 0.2s linear;
+
 }
-.txt-box li{
+.txtItem{
     width: 12.5%;
-    background-color: #333;
+    /* background-color: #333; */
     opacity: 0.3;
     color: #fff;
     text-align: center;
+}
+.txtItem:hover,.heighlightColor{
+    background-color: rgba(255, 164, 0, 0.815);
+}
+.txtItem:last-child{
+    margin: 0;
+}
+.normalColor{
+    background-color: rgba(0, 0, 0, 0.5);
 }
